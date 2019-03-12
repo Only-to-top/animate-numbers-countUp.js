@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.min.css">
+</head>
+<body>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+          <div class="wrap">
+            <h3>
+              <span id="up1">0</span> Лет на рынке</h3>
+            <p>6 лет успешной работы на рынке промышленной вентиляции</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+          <div class="wrap">
+            <h3>
+              <span id="up2">0</span> Объектов</h3>
+            <p>Более 150 выполненных объектов</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+          <div class="wrap">
+            <h3>
+              <span id="up3">0</span> Партнёров</h3>
+            <p>Более 120 партнёров и поставщиков</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3">
+          <div class="wrap">
+            <h3>
+              <span id="up4">0</span> кв.м.</h3>
+            <p>Установленных воздухопроводов</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="jquery.waypoints.min.js"></script>
+  <script src="countup.min.js"></script>
+  <script>
+    document.body.onload = function() {
+
+      //animate numbers
+      $(".first__little").waypoint(function() {
+
+        // 1
+        var options = {
+          useEasing: true,
+          useGrouping: true,
+          separator: ' ',
+          decimal: '.',
+        };
+        var demo = new CountUp('up1', 0, 6, 0, 3, options);
+        if (!demo.error) { demo.start(); } else { console.error(demo.error); }
+
+        // 2
+        var options = {
+            useEasing: true,
+            useGrouping: true,
+            separator: ' ',
+            decimal: '.',
+        };
+        var demo = new CountUp('up2', 0, 150, 0, 3, options);
+        if (!demo.error) { demo.start(); } else { console.error(demo.error); }
+
+        // 3
+        var options = {
+            useEasing: true,
+            useGrouping: true,
+            separator: ' ',
+            decimal: '.',
+        };
+        var demo = new CountUp('up3', 0, 120, 0, 3, options);
+        if (!demo.error) { demo.start(); } else { console.error(demo.error); }
+
+        // 4
+        var options = {
+            useEasing: true,
+            useGrouping: true,
+            separator: ' ',
+            decimal: '.',
+        };
+        var demo = new CountUp('up4', 0, 250000, 0, 3, options);
+        if (!demo.error) { demo.start(); } else { console.error(demo.error); };
+
+        this.destroy();
+
+      }, {
+        offset: '60%'
+      });
+
+    };
+  </script>
+</body>
+</html>
